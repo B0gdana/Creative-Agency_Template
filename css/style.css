@@ -1,0 +1,79 @@
+:root {
+    --highlight-color: #3d8af7;
+    --highlight-bg-color: #d4e3fc;
+}
+*, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+h1, h2, h4 {
+    color: var(--highlight-color);
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h3, p, q, a, a:visited, form, span {
+    color: #7a7a7a;
+    font-size: 18px;
+}
+h3, h4 {
+    font-size: 1.3rem;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--highlight-color);
+}
+ul {
+    list-style-type: none;
+}
+button, input[type=submit] {
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 1.3rem;
+    background-color: var(--highlight-color);
+    border: none;
+    
+}
+nav {
+    height: 100px;
+}
+.highlight-bg {
+    background-color: var(--highlight-bg-color);
+}
+.nav-item {
+    display: inline-block;
+    padding: 10px 15px;
+}
+.nav-item:active {
+    background-color: var(--highlight-color);
+    color: #fff;
+}
+.default-images {
+    width: 500px;
+}
+.team-member {
+    display: inline-block;
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+}
+.team-member>img {
+    width: 300px;
+}
+.portfolio-item{
+    width: 400px;
+    max-height: 250px;
+    overflow: hidden;
+}
+.slideshow-container {
+    display: inline-block;
+}
+.brand-img>img {
+    height: 50px;
+}
+
