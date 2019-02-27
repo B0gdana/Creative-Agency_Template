@@ -1,13 +1,14 @@
 :root {
-    --highlight-color: #3d8af7;
-    --highlight-bg-color: #d4e3fc;
-}
-*, body {
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+    display: flex;
+    border: 2px solid red;
 }
 h1, h2, h4 {
-    color: var(--highlight-color);
+    color: #3d8af7;
+    font-weight: normal;
 }
 h1 {
     font-size: 3rem;
@@ -26,7 +27,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: var(--highlight-color);
+    color: #3d8af7;
 }
 ul {
     list-style-type: none;
@@ -35,7 +36,7 @@ button, input[type=submit] {
     padding: 10px 15px;
     color: #fff;
     font-size: 1.3rem;
-    background-color: var(--highlight-color);
+    background-color: #3d8af7;
     border: none;
     
 }
@@ -43,14 +44,14 @@ nav {
     height: 100px;
 }
 .highlight-bg {
-    background-color: var(--highlight-bg-color);
+    background-color: #d4e3fc;
 }
 .nav-item {
     display: inline-block;
     padding: 10px 15px;
 }
 .nav-item:active {
-    background-color: var(--highlight-color);
+    background-color: #3d8af7;
     color: #fff;
 }
 .default-images {
