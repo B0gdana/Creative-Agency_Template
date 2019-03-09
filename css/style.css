@@ -44,6 +44,50 @@ nav .menu .nav-item a:active {
 ul {
     list-style-type: none;
 }
+header {
+    height: 400px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+    header .header-main-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .header-main-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    header .header-main-image img {
+        max-width: 320px;
+    }
+@media (min-width: 888px) {
+    header {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+    header .header-main-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .header-main-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header .header-main-image img {
+        min-width: 350px;
+        max-width: 440px;
+    }
+}
 
 @media (min-width: 440px) {
     nav {
@@ -55,28 +99,6 @@ ul {
     nav .menu {
         flex: 1;
         justify-content: flex-end;
-    }
-}
-
-header .header-main-title {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 480px;
-}
-
-header .header-main-image {
-    justify-content: center;
-    max-width: 480px;
-}
-
-@media (min-width: 480px) {
-    header #home {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-
     }
 }
 
@@ -96,6 +118,10 @@ h2 {
     font-size: 2rem;
 }
 
+h3 {
+    font-size: 1.3rem;
+}
+
 p,
 q,
 a,
@@ -103,11 +129,11 @@ a:visited,
 form,
 span {
     color: #7a7a7a;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
-
-h3 {
-    font-size: 1.3rem;
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 button,
@@ -120,14 +146,12 @@ input[type=submit] {
 
 }
 
+img {
+    max-width: 450px;
+}
 .highlight-bg {
     background-color: #d4e3fc;
-}
-
-.default-images {
-    min-width: 350px;
-    max-width: 500px;
-    max-height: 250px;
+    width: 100%;
 }
 
 .team-member {
@@ -148,7 +172,7 @@ input[type=submit] {
 
 }
 
-.portfolio-item{
+.portfolio-item {
 
     width: 400px;
 
