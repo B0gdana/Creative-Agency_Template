@@ -105,7 +105,7 @@ h1,
 h2,
 h3 {
     color: #3d8af7;
-    font-weight: normal;
+    font-weight: 500;
     margin: 0;
 }
 
@@ -164,6 +164,7 @@ img {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    padding: 10px 0;
 }
 .column {
     display: block;
@@ -176,7 +177,7 @@ img {
     max-width: 500px;
 }
 @media (min-width: 840px) {
-    .section-row {
+.section-row {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -187,7 +188,7 @@ img {
     max-width: 310px;
     padding: 5px;
 }
-.services-icons i {
+.icon i {
     font-size: 45px;
     margin: 10px;
     color: #3d8af7;
@@ -196,22 +197,18 @@ img {
 .list-unstyled {
     max-width: 450px;
 }
-.team-member {
-
-    display: inline-block;
-
-    background-color: #fff;
-
-    width: 300px;
-
-    height: 400px;
-
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
 }
-
-.team-member>img {
-
-    width: 300px;
-
+.quote-container .author {
+    align-self: flex-end;
+    color: #3d8af7;
+}
+.our-clients img {
+    max-width: 100px;
 }
 
 .portfolio-item {
