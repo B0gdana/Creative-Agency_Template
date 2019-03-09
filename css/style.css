@@ -101,7 +101,6 @@ header {
         justify-content: flex-end;
     }
 }
-
 h1,
 h2,
 h3 {
@@ -134,6 +133,7 @@ span {
 .subtitle {
     font-size: 1.2rem;
     margin-top: 10px;
+    padding: 0 15px;
 }
 
 button,
@@ -145,15 +145,57 @@ input[type=submit] {
     border: none;
 
 }
-
+section {
+    text-align: center;
+}
 img {
     max-width: 450px;
 }
 .highlight-bg {
     background-color: #d4e3fc;
     width: 100%;
+    padding-top: 5px;
+}
+.section-heading {
+    text-align: center;
+    margin: 20px 0 10px;
+}
+.section-row {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.column {
+    display: block;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+.description-text{
+    align-self: center;
+    text-align: left;
+    max-width: 500px;
+}
+@media (min-width: 840px) {
+    .section-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+}
+.service-item {
+    max-width: 310px;
+    padding: 5px;
+}
+.services-icons i {
+    font-size: 45px;
+    margin: 10px;
+    color: #3d8af7;
 }
 
+.list-unstyled {
+    max-width: 450px;
+}
 .team-member {
 
     display: inline-block;
