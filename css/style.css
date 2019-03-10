@@ -6,6 +6,13 @@ body {
     max-width: 980px;
     margin: auto;
 }
+/*@media (min-width: 990px) {*/
+/*.content-container {*/
+/*    max-width: 980px;*/
+/*    margin: 0 auto;*/
+/*    padding: 0;*/
+/*}*/
+/*}*/
 
 nav {
     display: flex;
@@ -44,6 +51,7 @@ nav .menu .nav-item a:active {
 ul {
     list-style-type: none;
 }
+
 header {
     height: 400px;
     display: flex;
@@ -51,27 +59,31 @@ header {
     justify-content: center;
     text-align: center;
 }
-    header .header-main-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    header .header-main-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15px;
-    }
-    header .header-main-image img {
-        max-width: 320px;
-    }
-@media (min-width: 888px) {
-    header {
-    height: 400px;
+
+header .header-main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-main-image {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 }
+
+header .header-main-image img {
+    max-width: 320px;
+}
+
+@media (min-width: 888px) {
+    header {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+    }
     header .header-main-title {
         display: flex;
         flex-direction: column;
@@ -101,6 +113,7 @@ header {
         justify-content: flex-end;
     }
 }
+
 h1,
 h2,
 h3 {
@@ -130,6 +143,7 @@ span {
     color: #7a7a7a;
     font-size: 1.1rem;
 }
+
 .subtitle {
     font-size: 1.2rem;
     margin-top: 10px;
@@ -139,55 +153,69 @@ span {
 button,
 input[type=submit] {
     padding: 10px 15px;
+    margin-bottom: 20px;
     color: #fff;
     font-size: 1.3rem;
     background-color: #3d8af7;
     border: none;
 
 }
+input[type=submit] {
+    margin-top: 20px;
+}
+
 section {
     text-align: center;
 }
+
 img {
     max-width: 450px;
 }
+
 .highlight-bg {
     background-color: #d4e3fc;
     width: 100%;
     padding-top: 5px;
 }
+
 .section-heading {
     text-align: center;
     margin: 20px 0 10px;
 }
+
 .section-row {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     padding: 10px 0;
 }
+
 .column {
     display: block;
     margin: 0 10px;
     padding: 0 10px;
 }
-.description-text{
+
+.description-text {
     align-self: center;
     text-align: left;
     max-width: 500px;
 }
+
 @media (min-width: 840px) {
-.section-row {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
+    .section-row {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
-}
+
 .service-item {
     max-width: 310px;
     padding: 5px;
 }
+
 .icon i {
     font-size: 45px;
     margin: 10px;
@@ -197,38 +225,110 @@ img {
 .list-unstyled {
     max-width: 450px;
 }
+
 .quote-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 600px;
 }
+
 .quote-container .author {
     align-self: flex-end;
     color: #3d8af7;
 }
+
 .our-clients img {
     max-width: 100px;
 }
 
+.card-deck {
+    padding: 10px 5px 30px 5px;
+}
+
+.card {
+    border-radius: 0;
+    border: none;
+    margin: 0;
+}
+
+.card-body {
+    height: 90px;
+    padding: 10px;
+}
+
+.card-body h3,
+.card-body p {
+    margin: 5px;
+}
+
+.card>img {
+    height: 230px;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px auto;
+    justify-content: center;
+}
+
 .portfolio-item {
-
-    width: 400px;
-
-    max-height: 250px;
-
+    width: 440px;
+    height: 290px;
+    margin: 10px auto;
     overflow: hidden;
-
 }
 
-.slideshow-container {
-
-    display: inline-block;
-
+@media (min-width: 660px) {
+    .portfolio-item {
+        width: 310px;
+        height: 200px;
+        margin: 10px 8px;
+        overflow: hidden;
+    }
 }
 
-.brand-img>img {
+.socials {
+    font-size: 45px;
+    margin: 10px;
+    color: #7a7a7a;
+}
 
-    height: 50px;
+.socials:hover {
+    color: #3d8af7;
+}
 
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+label {
+    margin: 10px 0 0 0;
+}
+footer form input, footer form textarea {
+    border:none;
+    background-image:none;
+    /*background-color:transparent;*/
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    width: 400px;
+}
+form input:focus, textarea:focus {
+    outline: rgba(61,138,247, 0.5);
+    outline-style: solid;
+    outline-width: 2px;
+}
+footer {
+    padding-bottom: 20px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin: 10px 0 20px;
 }
