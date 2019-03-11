@@ -5,6 +5,10 @@
     --default-text-color: #7a7a7a;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @media (min-width: 990px) {
     .content-container {
         max-width: 980px;
@@ -227,6 +231,9 @@ img {
     flex-flow: row wrap;
     margin: 10px auto;
     justify-content: center;
+}
+#more-less-items {
+    display: none;
 }
 
 .portfolio-item {
