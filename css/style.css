@@ -1,5 +1,8 @@
 :root {
     font-family: Arial, Helvetica, sans-serif;
+    --highlight-bg-color: #d4e3fc;
+    --highlight-color: #3d8af7;
+    --default-text-color: #7a7a7a;
 }
 
 @media (min-width: 990px) {
@@ -36,11 +39,11 @@ nav .menu .nav-item a {
 }
 
 nav .menu .nav-item a:hover {
-    color: #3d8af7;
+    color: var(--highlight-color);
 }
 
 nav .menu .nav-item a:active {
-    background-color: #3d8af7;
+    background-color: var(--highlight-color);
     color: #fff;
 }
 
@@ -94,7 +97,7 @@ header .header-main-image img {
 h1,
 h2,
 h3 {
-    color: #3d8af7;
+    color: var(--highlight-color);
     font-weight: 500;
     margin: 0;
 }
@@ -119,7 +122,7 @@ form,
 input,
 textarea,
 span {
-    color: #7a7a7a;
+    color: var(--default-text-color);
     font-size: 1.1rem;
 }
 
@@ -135,7 +138,7 @@ input[type=submit] {
     margin-bottom: 20px;
     color: #fff;
     font-size: 1.3rem;
-    background-color: #3d8af7;
+    background-color: var(--highlight-color);
     border: none;
 
 }
@@ -149,7 +152,7 @@ img {
 }
 
 .highlight-bg {
-    background-color: #d4e3fc;
+    background-color: var(--highlight-bg-color);
     width: 100%;
     padding: 5px 0 20px 0;
 }
@@ -195,7 +198,7 @@ img {
 .icon i {
     font-size: 45px;
     margin: 10px;
-    color: #3d8af7;
+    color: var(--highlight-color);
 }
 
 .list-unstyled {
@@ -211,7 +214,7 @@ img {
 
 .quote-container .author {
     align-self: flex-end;
-    color: #3d8af7;
+    color: var(--highlight-color);
 }
 
 .our-clients img {
@@ -245,11 +248,11 @@ img {
 .socials {
     font-size: 45px;
     margin: 10px;
-    color: #7a7a7a;
+    color: var(--default-text-color);
 }
 
 .socials:hover {
-    color: #3d8af7;
+    color: var(--highlight-color);
 }
 
 .card-deck {
