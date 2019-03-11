@@ -107,21 +107,21 @@
                     <div class="column">
                         <ul class="list-unstyled text-left">
                             <li class="media">
-                                <img src="..." class="mr-3" alt="...">
+                                <span class="icon"><i class="fas fa-edit"></i></span>
                                 <div class="media-body">
                                     <h3 class="mt-0 mb-1">List-based media object</h3>
                                     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at.</p>
                                 </div>
                             </li>
                             <li class="media my-4">
-                                <img src="..." class="mr-3" alt="...">
+                                <span class="icon"><i class="fab fa-buysellads"></i></span>
                                 <div class="media-body">
                                     <h3 class="mt-0 mb-1">List-based media object</h3>
                                     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at.</p>
                                 </div>
                             </li>
                             <li class="media">
-                                <img src="..." class="mr-3" alt="...">
+                                <span class="icon"><i class="fas fa-globe"></i></span>
                                 <div class="media-body">
                                     <h3 class="mt-0 mb-1">List-based media object</h3>
                                     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at.</p>
@@ -216,7 +216,6 @@
                         <h2>Creative Team</h2>
                         <p class="subtitle">We’re some creative people with powerful knowledge & awesome skills behind the scene bringing you the bests</p>
                     </div>
-
                     <div class="card-deck">
                         <div class="card">
                             <img src="img/team/team-member-2.jpg" alt="Team Member photo">
@@ -297,7 +296,7 @@
             <div class="section-row">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.5181441253467!2d23.994830215341338!3d49.83272103956259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add81aceadb73%3A0xb852d9f378109dfb!2z0LLRg9C70LjRhtGPINCk0LXQtNGM0LrQvtCy0LjRh9CwLCA2MCwg0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1551007649308"
                     width="510" height="340" style="border:0" allowfullscreen></iframe>
-                <form>
+                <form class="login-form">
                     <label for="user-name">Your name:</label>
                     <br>
                     <input type="text" name="full-name" id="user-name" placeholder="John Doe" />
@@ -310,8 +309,29 @@
                     <br>
                     <textarea name="user-message" id="user-message" placeholder="Your message..."></textarea>
                     <br>
-                    <input type="submit" value="Send message" />
+                    <input type="submit" value="Send message" data-toggle="modal" data-target="#exampleModalScrollable" />
                 </form>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalScrollableTitle">Creative Agency</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="server-response"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <p class="footer-copyright"><i class="far fa-copyright"></i> Creative Agency 2019</p>
         </div>

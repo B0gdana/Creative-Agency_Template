@@ -148,7 +148,7 @@ img {
 .highlight-bg {
     background-color: #d4e3fc;
     width: 100%;
-    padding-top: 5px;
+    padding: 5px 0 20px 0;
 }
 
 .section-heading {
@@ -215,29 +215,6 @@ img {
     max-width: 100px;
 }
 
-.card-deck {
-    padding: 10px 5px 30px 5px;
-}
-
-.card {
-    border-radius: 0;
-    border: none;
-    margin: 0;
-}
-
-.card-body {
-    height: 90px;
-    padding: 10px;
-}
-
-.card-body h3,
-.card-body p {
-    margin: 5px;
-}
-
-.card>img {
-    height: 230px;
-}
 
 .portfolio-container {
     display: flex;
@@ -271,12 +248,45 @@ img {
 .socials:hover {
     color: #3d8af7;
 }
+ .card-deck {
+    margin: 20px auto;
+    justify-content: center;
+    justify-items: center;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 400px;
+    grid-template-rows: repeat(4, 420px);
+    
+}
+@media (min-width: 600px){
+    .card-deck {
+    grid-template-columns: repeat(2, 230px);
+    grid-template-rows: repeat(2, 420px);
+}
+}
+@media (min-width: 950px){
+    .card-deck {
+    grid-template-columns: repeat(4, 230px);
+    grid-template-rows: 420px;
+}
+}
 
+.card {
+    border: none;
+    width: 230px;
+}
+.card-title>h3, .card-text>p {
+    margin: 5px 0;
+}
+.card>img {
+    width: auto;
+    max-height: 310px;
+}
 footer ul {
     display: flex;
     justify-content: center;
-    margin: 0 0 15px 0;
     padding: 0;
+    margin-bottom: 0;
 }
 footer form {
     margin: 20px;
