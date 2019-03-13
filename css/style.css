@@ -5,8 +5,9 @@
     --default-text-color: #7a7a7a;
 }
 
-html {
-    scroll-behavior: smooth;
+.content-container {
+    margin: 0 15px;
+    padding: 0;
 }
 
 @media (min-width: 990px) {
@@ -17,55 +18,51 @@ html {
     }
 }
 
+nav {
+    box-shadow: 0 0 5px rgba(61, 138, 247, 0.5)
+}
+
+.navbar-light {
+    background-color: #fff;
+}
+
 nav>.content-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 100px;
+    width: 100%;
 }
 
-nav .page-logo {
-    display: flex;
-    align-items: center;
-    margin: 10px auto;
+.navbar-collapse {
+    flex-direction: column;
 }
 
-nav .menu {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    padding: 0;
+@media (min-width: 760px) {
+    nav>.content-container {
+        height: 100px;
+        flex-wrap: nowrap;
+    }
+    .navbar-collapse {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 }
 
-nav .menu .nav-item a {
-    text-decoration: none;
-    padding: 10px 15px;
+.navbar-light .navbar-nav .nav-link {
+    color: var(--default-text-color);
+    padding: 15px 25px;
+
 }
 
-nav .menu .nav-item a:hover {
+.navbar-light .navbar-nav .nav-link:hover {
     color: var(--highlight-color);
 }
 
-nav .menu .nav-item a:active {
-    background-color: var(--highlight-color);
+.navbar-light .navbar-nav .active>.nav-link {
     color: #fff;
-}
-
-ul {
-    list-style-type: none;
-}
-
-@media (min-width: 440px) {
-    nav>.content-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 100px;
-    }
-    nav .menu {
-        flex: 1;
-        justify-content: flex-end;
-    }
+    background-color: var(--highlight-color);
 }
 
 header>.content-container {
@@ -226,13 +223,15 @@ img {
 }
 
 
-.portfolio-container {
+.portfolio-container,
+.visible {
     display: flex;
     flex-flow: row wrap;
     margin: 10px auto;
     justify-content: center;
 }
-#more-less-items {
+
+.hidden {
     display: none;
 }
 
@@ -325,7 +324,6 @@ footer form input,
 footer form textarea {
     border: none;
     background-image: none;
-    /*background-color:transparent;*/
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -342,6 +340,7 @@ footer form textarea {
     }
 }
 
+button:focus,
 form input:focus,
 textarea:focus {
     outline: rgba(61, 138, 247, 0.5);

@@ -13,18 +13,31 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="navbar sticky-top navbar-expand-md navbar-light">
         <div class="content-container">
-            <div class="page-logo">
+            <a class="navbar-brand my-4 smooth" href="#home">
                 <img src="img/page-logo.svg" alt="Page logo">
                 <span>Logo</span>
+            </a>
+            <button class="navbar-toggler my-4" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link smooth" href="#home">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth" href="#contacts">Contacts</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="menu">
-                <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#about">About</a></li>
-                <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a href="#contacts">Contacts</a></li>
-            </ul>
         </div>
     </nav>
     <header id="home" class="highlight-bg">
@@ -134,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!--------------------------------------------->
             <!--<div class="clients-reviews highlight-bg">-->
             <!--    <span class="icon">-->
@@ -262,17 +275,17 @@
                     <img src="img/portfolio/halkyon-days.jpg" alt="Halkyon days" class="portfolio-item">
                     <img src="img/portfolio/stationery-branding.jpg" alt="Stationery branding" class="portfolio-item">
                     <img src="img/portfolio/modern-one-page.jpg" alt="Modern One Page" class="portfolio-item">
-                <!--<div id="more-less-items">-->
-                    <img src="img/portfolio/vela.jpg" alt="Vela" class="portfolio-item">
-                    <img src="img/portfolio/art-craft-branding.jpeg" alt="Craft branding" class="portfolio-item">
-                    <img src="img/portfolio/vela.jpg" alt="Vela" class="portfolio-item">
-                    <img src="img/portfolio/art-craft-branding.jpeg" alt="Craft branding" class="portfolio-item">
-                    <img src="img/portfolio/brandi.jpg" alt="Brandi" class="portfolio-item">
-                    <img src="img/portfolio/halkyon-days.jpg" alt="Halkyon days" class="portfolio-item">
-                    <img src="img/portfolio/stationery-branding.jpg" alt="Stationery branding" class="portfolio-item">
-                    <img src="img/portfolio/modern-one-page.jpg" alt="Modern One Page" class="portfolio-item">
-                    <img src="img/portfolio/vela.jpg" alt="Vela" class="portfolio-item">
-                <!--</div> -->
+                    <div id="more-less-items" class="hidden">
+                        <img src="img/portfolio/vela.jpg" alt="Vela" class="portfolio-item">
+                        <img src="img/portfolio/art-craft-branding.jpeg" alt="Craft branding" class="portfolio-item">
+                        <img src="img/portfolio/vela.jpg" alt="Vela" class="portfolio-item">
+                        <img src="img/portfolio/art-craft-branding.jpeg" alt="Craft branding" class="portfolio-item">
+                        <img src="img/portfolio/brandi.jpg" alt="Brandi" class="portfolio-item">
+                        <img src="img/portfolio/halkyon-days.jpg" alt="Halkyon days" class="portfolio-item">
+                        <img src="img/portfolio/stationery-branding.jpg" alt="Stationery branding" class="portfolio-item">
+                        <img src="img/portfolio/modern-one-page.jpg" alt="Modern One Page" class="portfolio-item">
+                        <img src="img/portfolio/vela.jpg" alt="Vela" class="portfolio-item">
+                    </div>
                 </div>
                 <button id="more-less-btn">View all works</button>
             </div>
@@ -313,25 +326,25 @@
         </div>
     </footer>
     <!-- Modal -->
-                <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="exampleModalScrollableTitle">Creative Agency</h3>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalScrollableTitle">Creative Agency</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="server-response"></div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <div class="modal-body">
+                    <div class="server-response"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/script.js"></script>
