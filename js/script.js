@@ -4,11 +4,39 @@ $(function() {
         if (target.length) {
             event.preventDefault();
             $('html, body').stop().animate({
-                scrollTop: target.offset().top-130
+                scrollTop: target.offset().top - 130
             }, 500);
         }
     });
 });
+
+$(document).ready(function() {
+    $('.brands-carousel').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }
+        ]
+    });
+    $('.reviews-carousel').slick({
+        prevArrow: '<i class="fas fa-angle-left"></i>',
+        nextArrow: '<i class="fas fa-angle-right"></i>'
+    });
+});
+
 
 document.querySelector('.contact-form').addEventListener('submit', submitForm);
 

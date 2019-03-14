@@ -4,9 +4,13 @@
     --highlight-color: #3d8af7;
     --default-text-color: #7a7a7a;
 }
+:active,:focus, button:active, button:focus {
+    outline: none;
+}
 body {
     position: relative;
 }
+
 .content-container {
     margin: 0 15px;
     padding: 0;
@@ -39,6 +43,7 @@ nav>.content-container {
 
 .navbar-collapse {
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 760px) {
@@ -49,11 +54,13 @@ nav>.content-container {
     .navbar-collapse {
         flex-direction: row;
         justify-content: flex-end;
+        margin-bottom: 0;
     }
 }
+
 .navbar-light .navbar-nav .nav-link {
     color: var(--default-text-color);
-    padding: 15px 25px;
+    padding: 10px 25px;
 
 }
 
@@ -135,14 +142,20 @@ span {
 }
 
 button,
-input[type=submit] {
+input[type=submit],
+#to-next-section {
     padding: 15px 25px;
     margin-bottom: 20px;
     color: #fff;
     font-size: 1.3rem;
     background-color: var(--highlight-color);
     border: none;
+    text-decoration: none;
+}
 
+#to-next-section {
+    max-width: 200px;
+    margin: 5px auto 15px;
 }
 
 section {
@@ -207,22 +220,52 @@ img {
     max-width: 450px;
 }
 
-.quote-container {
+.clients-reviews {
+    padding: 30px 0;
+}
+
+.reviews-carousel {
+    max-width: 980px;
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: baseline;
+}
+
+i.slick-arrow {
+    background: none;
+    color: var(--default-text-color);
+    font-size: 35px;
+    margin: 0;
+}
+i.slick-arrow:hover {
+    color: var(--highlight-color);
+    transition: color 300ms ease-in;
+}
+
+.quote-container {
+    margin: 0 auto;
+    padding: 0 20px;
     max-width: 600px;
 }
 
 .quote-container .author {
-    align-self: flex-end;
+    text-align: right;
     color: var(--highlight-color);
+    margin: 10px 0 0 0;
 }
 
-.our-clients img {
-    max-width: 100px;
+.brands-carousel {
+    max-width: 980px;
+    margin: 30px auto;
+    padding: 30px;
 }
 
+.slick-slider .slick-track {
+    display: flex;
+    align-items: center;
+}
 
 .portfolio-container,
 .visible {
@@ -342,8 +385,8 @@ footer form textarea {
     }
 }
 
-button:focus,
-form input:focus,
+form input[type=text]:focus,
+input[type=email]:focus,
 textarea:focus {
     outline: rgba(61, 138, 247, 0.5);
     outline-style: solid;
