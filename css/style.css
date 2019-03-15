@@ -4,9 +4,14 @@
     --highlight-color: #3d8af7;
     --default-text-color: #7a7a7a;
 }
-:active,:focus, button:active, button:focus {
+
+:active,
+:focus,
+button:active,
+button:focus {
     outline: none;
 }
+
 body {
     position: relative;
 }
@@ -24,8 +29,9 @@ body {
     }
 }
 
-nav {
-    box-shadow: 0 0 5px rgba(61, 138, 247, 0.5)
+nav.navbar {
+    box-shadow: 0 3px 2px -2px rgba(61, 138, 247, 0.4);
+    min-height: 100px;
 }
 
 .navbar-light {
@@ -37,18 +43,29 @@ nav>.content-container {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 100px;
     width: 100%;
 }
 
 .navbar-collapse {
     flex-direction: column;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.navbar-brand>img {
+    height: 40px;
+    margin: 8px 15px;
 }
 
 @media (min-width: 760px) {
+    nav.navbar {
+        height: 120px;
+    }
+    nav.navbar.shrink {
+        height: 40px;
+        transition: height 300ms;
+    }
     nav>.content-container {
-        height: 100px;
         flex-wrap: nowrap;
     }
     .navbar-collapse {
@@ -61,7 +78,6 @@ nav>.content-container {
 .navbar-light .navbar-nav .nav-link {
     color: var(--default-text-color);
     padding: 10px 25px;
-
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -225,6 +241,7 @@ img {
 }
 
 .reviews-carousel {
+    min-width: 300px;
     max-width: 980px;
     text-align: center;
     padding: 30px;
@@ -239,6 +256,7 @@ i.slick-arrow {
     font-size: 35px;
     margin: 0;
 }
+
 i.slick-arrow:hover {
     color: var(--highlight-color);
     transition: color 300ms ease-in;
@@ -257,6 +275,7 @@ i.slick-arrow:hover {
 }
 
 .brands-carousel {
+    min-width: 300px;
     max-width: 980px;
     margin: 30px auto;
     padding: 30px;
@@ -353,16 +372,16 @@ footer ul {
     margin-bottom: 0;
 }
 
-footer form {
-    margin: 20px;
+.map, footer.contact-form {
+    margin: 20px auto;
 }
-
 label {
     margin-bottom: 0;
 }
 
 footer input[type=submit] {
     margin-top: 15px;
+    padding: 15px;
 }
 
 footer form input,
@@ -372,16 +391,25 @@ footer form textarea {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    box-sizing: border-box;
+    box-sizing: content-box;
     padding: 10px 15px;
     margin: 5px 0;
-    width: 510px;
+    width: 480px;
 }
 
 @media (min-width: 840px) {
+    .map {
+        margin: 20px;
+        margin-left: 0;
+    }
+
+    footer.contact-form {
+        margin: 20px;
+        margin-right: 0;
+    }
     footer form input,
     footer form textarea {
-        width: 400px;
+        width: 420px;
     }
 }
 

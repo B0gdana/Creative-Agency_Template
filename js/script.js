@@ -9,7 +9,13 @@ $(function() {
         }
     });
 });
-
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 100) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});
 $(document).ready(function() {
     $('.brands-carousel').slick({
         slidesToShow: 6,
@@ -37,6 +43,16 @@ $(document).ready(function() {
     });
 });
 
+document.querySelector('body').addEventListener('scroll', scaleNavbar);
+function scaleNavbar() {
+    if (document.body.scrollTop > 105 || document.documentElement.scrollTop > 105) {
+      document.getElementById('navbar-scroll').style.height = "70px"; 
+      document.querySelector('.navbar-brand img').style.height = "30px";
+    }
+    else {
+    document.getElementById('navbar-scroll').style.height = "100px";
+    }
+}
 
 document.querySelector('.contact-form').addEventListener('submit', submitForm);
 

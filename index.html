@@ -13,12 +13,11 @@
     <!--<link rel="shortcut icon" href="img/favicon.ico">-->
 </head>
 
-<body data-spy="scroll" data-target="#navbarScroll" data-offset="200">
-    <nav class="navbar sticky-top navbar-expand-md navbar-light" id="navbarScroll">
+<body data-spy="scroll" data-target="#navbar-scroll" data-offset="200">
+    <nav class="navbar sticky-top navbar-expand-md navbar-light" id="navbar-scroll">
         <div class="content-container">
             <a class="navbar-brand my-4 smooth" href="#home">
                 <img src="img/page-logo.svg" alt="Page logo">
-                <span>Logo</span>
             </a>
             <button class="navbar-toggler my-4" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -285,8 +284,10 @@
                 <li><a href="mailto:yourmail@example.com"><span class="socials"><i class="fas fa-envelope-square"></i></span></a></li>
             </ul>
             <div class="section-row">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.5181441253467!2d23.994830215341338!3d49.83272103956259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add81aceadb73%3A0xb852d9f378109dfb!2z0LLRg9C70LjRhtGPINCk0LXQtNGM0LrQvtCy0LjRh9CwLCA2MCwg0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1551007649308"
-                    width="510" height="340" style="border:0" allowfullscreen></iframe>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.5181441253467!2d23.994830215341338!3d49.83272103956259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add81aceadb73%3A0xb852d9f378109dfb!2z0LLRg9C70LjRhtGPINCk0LXQtNGM0LrQvtCy0LjRh9CwLCA2MCwg0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1551007649308"
+                        width="510" height="340" style="border:0" allowfullscreen></iframe>
+                </div>
                 <form class="contact-form" method="POST" action="form.php">
                     <label for="user-name">Your name:</label>
                     <br>
